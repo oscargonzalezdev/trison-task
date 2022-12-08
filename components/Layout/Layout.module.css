@@ -1,0 +1,105 @@
+.navbar {
+    width: 100%;
+    height: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbarIcon {
+    display: none;
+}
+
+.navbarItems ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.navbarItems a {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.navbarItems a:hover {
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.main {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    background: linear-gradient(to right, var(--color-primary) 45%, var(--color-primary-variant));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Grand Hotel', sans-serif, Georgia, serif;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.logo svg path {
+    stroke: var(--color-primary);
+}
+
+.footer,
+.footer>* {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width: 700px) {
+    .navbarIcon {
+        font-size: 1.7rem;
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbarItems {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background: linear-gradient(to right, var(--color-secondary) 50%, var(--color-secondary-variant));
+        height: 0px;
+        width: 100%;
+        transition: all 0.3s ease-in;
+        overflow: hidden;
+    }
+
+    .navbarItems.active {
+        height: calc(100vh - 60px);
+    }
+
+    .navbarItems ul {
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .navbarItems ul a {
+        font-size: 2rem;
+    }
+}
