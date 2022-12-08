@@ -1,0 +1,91 @@
+/* FONTS */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: bold;
+  font-weight: 600;
+  src: url('/fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Grand Hotel';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/GrandHotel-Regular.ttf');
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* VARIABLES */
+:root {
+  --color-primary: #ff6b6b;
+  --color-primary-variant: #ffa16b;
+  --color-secondary: #B9E1DC;
+  --color-secondary-variant: #ccedf1;
+  --color-tertiary: #756C83;
+  --color-dark: #1d1d1d;
+  --color-light: #FBFBFB;
+}
+
+/* GLOBALS */
+html,
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+header,
+footer {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  background: linear-gradient(to right, var(--color-secondary) 50%, var(--color-secondary-variant));
+}
+
+footer {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+main a, footer a {
+  border-bottom: 0.5px solid var(--color-primary-variant);
+}
+main a:hover, footer a:hover {
+  color: var(--color-primary-variant);
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width: 700px) {
+
+}
