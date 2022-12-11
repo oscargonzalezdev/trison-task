@@ -1,0 +1,68 @@
+.formContainer {
+    max-width: 550px;
+    margin: 20px;
+    background: linear-gradient(0deg, var(--color-tertiary), var(--color-tertiary-variant));
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px var(--color-dark);
+}
+
+.formContainer h1 {
+    margin-bottom: 1.5rem;
+}
+
+.twoColumns {
+    width: 100%;
+    display: inline-flex;
+}
+
+.twoColumns label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.twoColumns span,
+.enquiry span {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.twoColumns input,
+.enquiry textarea {
+    display: block;
+    font-size: 1.1rem;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.twoColumns,
+.enquiry {
+    margin-bottom: 10px;
+}
+
+.twoColumns label:nth-child(1),
+.twoColumns label:nth-child(3) {
+    margin-right: 10px;
+}
+
+.enquiry label {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.enquiry textarea {
+    min-height: 150px;
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width: 700px) {
+    .twoColumns {
+        width: 100%;
+        display: inline-block;
+    }
+}
