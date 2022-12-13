@@ -1,3 +1,14 @@
+.bgForm {
+    min-height: calc(100vh - 120px) !important;
+    background-image: url(/images/bg-form.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .formContainer {
     max-width: 550px;
     margin: 20px;
