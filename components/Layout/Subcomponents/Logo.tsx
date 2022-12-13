@@ -1,7 +1,11 @@
 import styles from "../Layout.module.css";
 import { GrRestaurant } from "react-icons/gr";
 
-function Logo({size}) {
+interface Props {
+  size?: string;
+}
+
+function Logo({size}: Props) {
 
   return (
     <div className={styles.logo}>
