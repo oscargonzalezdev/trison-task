@@ -1,8 +1,9 @@
-import styles from "./Layout.module.css";
+import styles from "../Layout.module.css";
 import { FiHeart as Love } from "react-icons/fi";
 import { BsGithub } from "react-icons/bs";
 
 function Footer() {
+  
   return (
     <div className={styles.footer}>
       <span>
