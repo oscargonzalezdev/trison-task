@@ -1,0 +1,53 @@
+.bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    background: linear-gradient(45deg, var(--color-tertiary), var(--color-tertiary-variant));
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    border-radius: 7px;
+    position: relative;
+    background-position: right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 10%;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+.container>* {
+    max-width: 600px;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.table tbody td {
+    border-bottom: 1px solid rgb(82, 82, 82);
+    min-width: 30px;
+}
+
+.table tbody td:first-child {
+    padding-right: 30px;
+}
+
+.table thead td h3 {
+    margin-bottom: 10px;
+}
