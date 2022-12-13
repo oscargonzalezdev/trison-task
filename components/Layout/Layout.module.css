@@ -20,23 +20,32 @@
     gap: 60px;
 }
 
-.navbarItems a {
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
+.dropdown.active>a,
 .navbarItems a:hover {
     border-bottom: 3px solid var(--color-primary);
 }
 
+.link {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.backLink {
+    display: none;
+    width: fit-content;
+    height: 2rem;
+    margin: 10px 20px;
+}
+
 .main {
+    width: 100%;
+    height: 100%;
     min-height: calc(100vh - 120px);
     display: flex;
     flex: 1;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    margin: auto;
 }
 
 .logo {
@@ -69,6 +78,68 @@
     font-size: 0.9rem;
 }
 
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    z-index: 1;
+}
+
+.dropdownMenu {
+    width: 600px;
+    background: var(--color-secondary);
+    overflow-y: scroll;
+    position: absolute;
+    top: calc(100% + 20px);
+    right: -50px;
+    padding: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.318);
+    opacity: 0;
+    border-radius: 0 0 5px 5px;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdownMenu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.menuContainer {
+    width: 100%;
+    background-color: var(--color-secondary);
+    transition: all 1s ease;
+}
+
+.menuContainer:hover {
+    background-color: var(--color-light);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.menuInfo {
+    text-align: right;
+    width: 100%;
+    height: max-content;
+    padding: 30px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all .8s;
+}
+
+.menuInfo:hover {
+    padding-right: 190px;
+    background-position: right;
+    transition: all .8s;
+}
+
+.menuInfo h2 {
+    font-size: 1.4rem;
+}
+
+
 /* MOBILE VIEW */
 @media screen and (max-width: 700px) {
     .navbarIcon {
@@ -81,11 +152,12 @@
         position: absolute;
         right: 0;
         top: 60px;
-        background: linear-gradient(to right, var(--color-secondary) 50%, var(--color-secondary-variant));
+        background-color: var(--color-secondary);
         height: 0px;
         width: 100%;
         transition: all 0.3s ease-in;
         overflow: hidden;
+        z-index: 1;
     }
 
     .navbarItems.active {
@@ -99,7 +171,45 @@
         gap: 40px;
     }
 
-    .navbarItems ul a {
-        font-size: 2rem;
+    .menuInfo:hover {
+        padding-right: 120px;
+    }
+
+    .link {
+        font-size: 2.1rem;
+        font-weight: 500;
+    }
+
+    .backLink {
+        display: inline-block;
+    }
+
+    .dropdown {
+        position: unset;
+    }
+
+    .menuInfo h2 {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .menuInfo {
+        max-height: 100px;
+        font-size: 1rem;
+        background-position: -50px;
+    }
+
+    .menuInfo:hover {
+        background-position: 120%;
+    }
+
+    .dropdownMenu {
+        position: absolute;
+        background-color: var(--color-secondary);
+        right: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        opacity: 0;
     }
 }

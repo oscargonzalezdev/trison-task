@@ -1,8 +1,8 @@
 import styles from "./Layout.module.css";
 import { ReactNode } from "react";
 import Head from "next/head";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
+import Footer from "./Subcomponents/Footer";
+import Navbar from "./Subcomponents/Navbar";
 
 interface Props {
   children: ReactNode;
